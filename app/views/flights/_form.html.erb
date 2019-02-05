@@ -8,8 +8,6 @@
     <%= form.text_field :to %>
     <%= form.label :from %>
     <%= form.text_field :from %>
-    <%= form.label :time %>
-    <%= form.text_field :time %>
     <%= form.label :airplane_id %>
     <%= form.select :airplane_id, Airplane.pluck(:name, :id), :include_blank => true %>
   </div>
