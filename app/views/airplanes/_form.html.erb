@@ -1,4 +1,13 @@
 <%= form_with(model: airplane, local: true) do |form| %>
+  <div class="form">
+    <%= form.label :name %>
+    <%= form.text_field :name, :autofocus => true %>
+    <%= form.label :rows %>
+    <%= form.text_field :rows %>
+    <%= form.label :cols %>
+    <%= form.text_field :cols %>
+  </div>
+  <br>
   <% if airplane.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(airplane.errors.count, "error") %> prohibited this airplane from being saved:</h2>
@@ -14,4 +23,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

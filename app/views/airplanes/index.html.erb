@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Airplanes</h1>
+<h2>Airplanes</h2>
 
 <table>
   <thead>
@@ -12,7 +12,9 @@
   <tbody>
     <% @airplanes.each do |airplane| %>
       <tr>
-        <td><%= link_to 'Show', airplane %></td>
+        <td><%= link_to airplane.name, airplane %></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Edit', edit_airplane_path(airplane) %></td>
         <td><%= link_to 'Destroy', airplane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
