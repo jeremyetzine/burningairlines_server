@@ -1,4 +1,18 @@
 <%= form_with(model: flight, local: true) do |form| %>
+  <div class="form">
+    <%= form.label :flight %>
+    <%= form.text_field :flight, :autofocus => true %>
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+    <%= form.label :to %>
+    <%= form.text_field :to %>
+    <%= form.label :from %>
+    <%= form.text_field :from %>
+    <%= form.label :time %>
+    <%= form.text_field :time %>
+    <%= form.label :airplane_id %>
+    <%= form.select :airplane_id, Airplane.pluck(:name, :id), :include_blank => true %>
+  </div>
   <% if flight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>

@@ -69,6 +69,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.fetch(:flight, {})
+      params.require(:flight).permit(:flight, :date, :to, :from, :time, :airplane_id)
     end
 end
