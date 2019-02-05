@@ -13,6 +13,7 @@
     <%= form.label :airplane_id %>
     <%= form.select :airplane_id, Airplane.pluck(:name, :id), :include_blank => true %>
   </div>
+  <br>
   <% if flight.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(flight.errors.count, "error") %> prohibited this flight from being saved:</h2>
