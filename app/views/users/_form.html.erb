@@ -3,6 +3,8 @@
   <%= form.text_field :name, :autofocus => true %>
   <%= form.label :email %>
   <%= form.email_field :email, :required => true %>
+  <%= form.label :admin %>
+  <%= form.check_box :admin %>
   <%= form.label :password %>
   <%= form.password_field :password, :required => true %>
   <%= form.label :password_confirmation %>
