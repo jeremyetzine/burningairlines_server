@@ -4,7 +4,7 @@ class CreateAirplanes < ActiveRecord::Migration[5.2]
       t.text :name
       t.integer :rows
       t.integer :cols
-
+      
       t.timestamps
     end
   end
