@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => 'session#new'
-  
-  resources :reservations
+
+  resources :reservations, :except => [:new]
   resources :users
   resources :flights
   resources :airplanes
