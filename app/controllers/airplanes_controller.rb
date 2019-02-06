@@ -1,5 +1,5 @@
 class AirplanesController < ApplicationController
-  # before_action :set_airplane, only: [:show, :edit, :update, :destroy]
+  before_action :set_airplane, only: [:show, :edit, :update, :destroy]
   before_action :check_for_admin
 
   # GET /airplanes
