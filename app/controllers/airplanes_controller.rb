@@ -21,6 +21,7 @@ class AirplanesController < ApplicationController
 
   # GET /airplanes/1/edit
   def edit
+    @airplane = Airplane.find params[:id]
   end
 
   # POST /airplanes

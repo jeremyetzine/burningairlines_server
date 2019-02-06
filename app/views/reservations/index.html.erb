@@ -19,6 +19,9 @@
         <td><%= link_to reservation.flight.flight, reservation.flight %></td>
         <td><%= link_to reservation.user.name %></td>
         <td><%= link_to reservation.seat, reservation %></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
         <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

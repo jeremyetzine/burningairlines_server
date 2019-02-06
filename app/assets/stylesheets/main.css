@@ -1,0 +1,36 @@
+.container {
+  max-width: 75vw;
+  text-align: center;
+  margin: 0 auto;
+  border: 5px solid red;
+  padding: 1em;
+}
+
+table {
+  margin: auto;
+  padding: 5px;
+}
+
+tr {
+  text-align: center;
+}
+th {
+  padding: 5px;
+}
+
+.nav {
+  max-width: 75vw;
+  margin: 0 auto;
+  border: 5px solid red;
+  border-bottom: none;
+  padding: 1em;
+}
+
+.main_nav {
+  display: inline-block;
+}
+
+.log_out {
+  display: inline-block;
+  float: right;
+}
