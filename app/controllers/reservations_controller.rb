@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/1
   # GET /reservations/1.json
   def show
+    @reservation = Reservation.find params[:id]
   end
 
   # GET /reservations/new
