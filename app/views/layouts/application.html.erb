@@ -10,12 +10,17 @@
   </head>
 
   <body>
-    <nav>
-      <a href="/airplanes">Airplanes</a> |
-      <a href="/flights">Flights</a> |
-      <a href="/reservations">Reservations</a> |
-      <a href="/users">All Admins</a>
-    </nav>
+    <% if @current_user.present? %>
+      <nav class="main_nav">
+        <a href="/airplanes">Airplanes</a> |
+        <a href="/flights">Flights</a> |
+        <a href="/reservations">Reservations</a> |
+        <a href="/users">All Users</a>
+      </nav>
+      <nav class="log_out">
+        <%= link_to("Log Out", login_path, :method => :delete) %>
+      </nav>
+    <% end %>
     <h1>Burning Airlines</h1>
     <%= yield %>
   </body>

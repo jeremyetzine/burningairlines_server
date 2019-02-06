@@ -1,0 +1,19 @@
+<h2>Sign In</h2>
+<h6>(All fields are case specific).</h6>
+<% if flash[:error_message].present? %>
+  <p><%= flash[:error_message] %></p>
+<% end %>
+
+<%= form_tag login_path do %>
+
+  <%= label_tag :name %>
+  <%= text_field_tag :name, nil %>
+  <%= label_tag :email %>
+  <%= email_field_tag :email, nil %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password, nil %>
+  <br>
+  <br>
+  <%= submit_tag "Sign In", :class => 'btn btn-primary' %>
+
+<% end %>
