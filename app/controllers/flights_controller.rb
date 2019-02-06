@@ -64,6 +64,12 @@ class FlightsController < ApplicationController
     end
   end
 
+  # for /flights/:id/reservations.json
+  def reservations
+    @flight = Flight.find params[:id]
+    render json: @flight, include: :reservations
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_flight

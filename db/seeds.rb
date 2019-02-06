@@ -14,6 +14,7 @@ u2 = User.create :name => 'Chicken', :email => 'FlyingChicken@ga.co', :password 
 u3 = User.create :name => 'Turkey', :email => 'FlyingTurkey@ga.co', :password => 'turkey', :admin => false
 
 Reservation.destroy_all
-r1 = Reservation.create :seat_row => 22, :seat_col => 'A', :seat => '22A', :flight_id => f1.id, :user_id => u1.id
-r2 = Reservation.create :seat_row => 10, :seat_col => 'E', :seat => '10E', :flight_id => f2.id, :user_id => u2.id
-r3 = Reservation.create :seat_row => 4, :seat_col => 'C', :seat => '4C', :flight_id => f3.id, :user_id => u3.id
+r1 = Reservation.create :seat_row => 22, :seat_col => 1, :seat => '22A', :flight_id => f1.id, :user_id => u1.id
+r2 = Reservation.create :seat_row => 10, :seat_col => 5, :seat => '10E', :flight_id => f2.id, :user_id => u2.id
+r3 = Reservation.create :seat_row => 4, :seat_col => 3, :seat => '4C', :flight_id => f3.id, :user_id => u3.id
+r3 = Reservation.create :seat_row => 15, :seat_col => 2, :seat => '15B', :flight_id => f2.id, :user_id => u1.id
