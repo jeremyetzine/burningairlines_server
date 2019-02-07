@@ -5,13 +5,14 @@ class AirplanesController < ApplicationController
   # GET /airplanes
   # GET /airplanes.json
   def index
-    @airplanes = Airplane.all
+    @airplanes = Airplane.order(:name)
   end
 
   # GET /airplanes/1
   # GET /airplanes/1.json
   def show
     @airplane = Airplane.find params[:id]
+    @rows = @airplane.rows
   end
 
   # GET /airplanes/new
