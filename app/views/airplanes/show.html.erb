@@ -8,6 +8,8 @@
 <%= link_to 'Edit', edit_airplane_path(@airplane) %> |
 <%= link_to 'Back', airplanes_path %>
 
+
+<h2>Seating Grid:</h2>
 <table class="planegrid">
   <% (0...@rows).each_slice(@airplane.cols) do |slice| %>
     <tr class="planegridrow">
