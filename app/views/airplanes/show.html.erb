@@ -9,9 +9,9 @@
 <%= link_to 'Back', airplanes_path %>
 
 
-<h2>Seating Grid:</h2>
+<h2>Seating Diagram:</h2>
 <table class="planegrid">
-  <% (0...@rows).each_slice(@airplane.cols) do |slice| %>
+  <% (0...(@rows * @cols)).each_slice(@airplane.cols) do |slice| %>
     <tr class="planegridrow">
       <% slice.each do |col| %>
         <td class="planegridcol">

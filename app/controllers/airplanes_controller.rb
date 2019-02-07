@@ -13,6 +13,7 @@ class AirplanesController < ApplicationController
   def show
     @airplane = Airplane.find params[:id]
     @rows = @airplane.rows
+    @cols = @airplane.cols
   end
 
   # GET /airplanes/new
